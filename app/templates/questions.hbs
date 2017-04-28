@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="contaienr">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Ask a Question</div>
+          <div class="collapsible-body">
+            <div class="row">
+              {{outlet}}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  {{#each model as |question|}}
+    <div class="row">
+      <div class="col s12 m6">
+        {{question-tile question=question}}
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+{{#link-to 'questions.new'}}New Question{{/link-to}}
