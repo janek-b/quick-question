@@ -1,12 +1,13 @@
 
-<div class="card-panel blue-grey darken-1 white-text">
-  <h5>{{question.title}}</h5>
-  <div class="chip">
-    <img src={{question.user.photoURL}} alt={{question.user.name}}>
-    {{question.user.name}}
+{{#link-to 'question' question.id}}
+  <div class="card-panel blue-grey darken-1 white-text">
+    <h5>{{question.title}}</h5>
+    <div class="chip">
+      <img src={{question.user.photoURL}} alt={{question.user.name}}>
+      {{question.user.name}}
+    </div>
   </div>
-</div>
-
+{{/link-to}}
 
 {{!-- <div class="card blue-grey darken-1">
   <div class="card-content white-text">
