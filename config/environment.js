@@ -1,4 +1,5 @@
 /* eslint-env node */
+var firebaseConfig = require('../.env').firebaseConfig
 
 module.exports = function(environment) {
   var ENV = {
@@ -15,6 +16,11 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+    },
+
+    firebase: firebaseConfig,
+    torii: {
+      sessionServiceName: 'session',
     },
 
     APP: {

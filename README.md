@@ -37,6 +37,20 @@ You will need the following things properly installed on your computer.
     storageBucket: 'YOUR-FIREBASE-APP.appspot.com'
   }
   ```
+  * User authentication with firebase is implemented by following this [tutorial](https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/).
+  * Authentication with google needs to be enabled in firebase by going to the _Authentication_ section in the firebase dashboard and under _SIGN-IN METHOD_ enabling google.
+  * Additionally in the firebase dashboard in the _Database_ section under the _RULES_ tab change the rules to the following to allow viewing site content without being logged in and searching for user by their uid.
+  ```
+  {
+    "rules": {
+      ".read": true,
+      ".write": "auth != null",
+      "users": {
+        ".indexOn": "userID"
+      }
+    }
+  }
+  ```
 
 2. Specs
   * If a user is not logged in they are able to view a list of questions.
@@ -62,6 +76,7 @@ You will need the following things properly installed on your computer.
 
 5. Polish
   * improve README
+  * add firebase config instructions.
 
 
 ## Further Reading / Useful Links
