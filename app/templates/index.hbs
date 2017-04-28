@@ -1,11 +1,12 @@
 
-<div class="layout-row">
-  {{#paper-list}}
-    {{#each model as |question|}}
-      {{question-tile question=question}}
-    {{/each}}
-  {{/paper-list}}
+<div class="container">
+  {{#each model as |question|}}
+    <div class="row">
+      <div class="col s12 m6">
+        {{question-tile question=question}}
+      </div>
+    </div>
+  {{/each}}
 </div>
-
 
 {{#link-to 'questions.new'}}New Question{{/link-to}}

@@ -1,1 +1,5 @@
-@import 'ember-paper';
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
+
+// Materialize styles
+@import "materialize";

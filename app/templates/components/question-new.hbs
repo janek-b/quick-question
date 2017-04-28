@@ -1,12 +1,16 @@
-{{#paper-form onSubmit=(action "saveQuestion") as |form|}}
-  <div class="layout-row">
-    {{form.input label="Title" value=title onChange=(action (mut title)) required=true}}
+
+<form class="col s12">
+  <div class="row">
+    <div class="input-field col s12">
+      {{input value=title type="text" class="validate"}}
+      <label for="title">Title</label>
+    </div>
+    <div class="input-field col s12">
+      {{textarea value=body class="materialize-textarea"}}
+      <label for="body">Additional Details</label>
+    </div>
+    <div class="col s12">
+      <button class="btn waves-effect waves-light" type="submit" {{action "saveQuestion"}}>Submit</button>
+    </div>
   </div>
-  <div class="layout-row">
-    {{form.input textarea=true block=true label="Body" maxlength=150 passThru=(hash rows=5 maxRows=5)
-    value=body onChange=(action (mut body))}}
-  </div>
-  <div class="layout-row">
-    {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
-  </div>
-{{/paper-form}}
+</form>

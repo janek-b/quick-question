@@ -1,18 +1,21 @@
 
-{{!-- {{#paper-card as |card|}}
-  {{#card.title as |title|}}
-    {{#title.text as |text|}}
-      {{#text.headline}}{{question.title}}{{/text.headline}}
-      {{#text.subhead}}{{question.user.name}}{{/text.subhead}}
-    {{/title.text}}
-    {{title.media size="sm" src=question.user.photoURL alt=question.user.name title=question.user.name}}
-  {{/card.title}}
-{{/paper-card}} --}}
-
-{{#paper-item class="md-2-line"}}
-  <img src={{question.user.photoURL}} alt={{question.user.name}} class="md-avatar">
-  <div class="md-list-item-text">
-    <h3>{{question.title}}</h3>
-    <p>{{question.user.name}}</p>
+<div class="card-panel blue-grey darken-1 white-text">
+  <h5>{{question.title}}</h5>
+  <div class="chip">
+    <img src={{question.user.photoURL}} alt={{question.user.name}}>
+    {{question.user.name}}
   </div>
-{{/paper-item}}
+</div>
+
+
+{{!-- <div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <span class="card-title">{{question.title}}</span>
+  </div>
+  <div class="card-action">
+    <div class="chip">
+      <img src={{question.user.photoURL}} alt={{question.user.name}}>
+      {{question.user.name}}
+    </div>
+  </div>
+</div> --}}
