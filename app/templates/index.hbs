@@ -1,6 +1,11 @@
 
-{{#each model as |question|}}
-  {{question-tile question=question}}
-{{/each}}
+<div class="layout-row">
+  {{#paper-list}}
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+    {{/each}}
+  {{/paper-list}}
+</div>
+
 
 {{#link-to 'questions.new'}}New Question{{/link-to}}

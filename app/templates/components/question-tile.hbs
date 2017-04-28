@@ -1,4 +1,18 @@
 
-<h2>{{question.title}}</h2>
-<p>{{question.body}}</p>
-<p>{{question.timestamp}}</p>
+{{!-- {{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}{{question.title}}{{/text.headline}}
+      {{#text.subhead}}{{question.user.name}}{{/text.subhead}}
+    {{/title.text}}
+    {{title.media size="sm" src=question.user.photoURL alt=question.user.name title=question.user.name}}
+  {{/card.title}}
+{{/paper-card}} --}}
+
+{{#paper-item class="md-2-line"}}
+  <img src={{question.user.photoURL}} alt={{question.user.name}} class="md-avatar">
+  <div class="md-list-item-text">
+    <h3>{{question.title}}</h3>
+    <p>{{question.user.name}}</p>
+  </div>
+{{/paper-item}}
