@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement: function () {
-    this._super();
+    this._super(...arguments);
     Ember.$('.collapsible').collapsible();
   }
 });

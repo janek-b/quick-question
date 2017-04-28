@@ -6,7 +6,7 @@
           <div class="collapsible-header">Ask a Question</div>
           <div class="collapsible-body">
             <div class="row">
-              {{outlet}}
+              {{question-new session=session saveQuestion='saveQuestion'}}
             </div>
           </div>
         </li>
@@ -25,4 +25,4 @@
   {{/each}}
 </div>
 
-{{#link-to 'questions.new'}}New Question{{/link-to}}
+{{dom-ready}}
