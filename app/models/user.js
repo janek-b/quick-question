@@ -5,5 +5,5 @@ export default DS.Model.extend({
   userID: DS.attr(),
   photoURL: DS.attr(),
   questions: DS.hasMany('question', {async: true}),
-  answers: DS.hasMany('answer', {async: true})
+  answers: DS.hasMany('answer', {async: true}),
 });

@@ -3,10 +3,12 @@
     <div class="card-content white-text">
       <span class="card-title text-capitalize">{{question.title}}</span>
       <hr>
-      <div class="chip hoverable left">
-        <img src={{question.user.photoURL}} alt={{question.user.name}}>
-        {{question.user.name}}
-      </div>
+      {{#link-to 'user' question.user.id}}
+        <div class="chip hoverable left">
+          <img src={{question.user.photoURL}} alt={{question.user.name}}>
+          {{question.user.name}}
+        </div>
+      {{/link-to}}
       <div class="right-align">
         <p>{{question.timestamp}}</p>
       </div>
