@@ -1,0 +1,15 @@
+
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <span class="card-title text-capitalize">{{question.title}}</span>
+    <blockquote>{{question.body}}</blockquote>
+    <hr>
+    <div class="chip hoverable left">
+      <img src={{question.user.photoURL}} alt={{question.user.name}}>
+      {{question.user.name}}
+    </div>
+    <div class="right-align">
+      <p>{{question.timestamp}}</p>
+    </div>
+  </div>
+</div>

@@ -3,3 +3,7 @@ $roboto-font-path: '../assets/';
 
 // Materialize styles
 @import "materialize";
+
+.text-capitalize {
+  text-transform: capitalize;
+}

@@ -1,19 +1,22 @@
-<div class="contaienr">
-  <div class="row">
-    <div class="col s8 offset-s2">
-      <ul class="collapsible popout" data-collapsible="accordion">
-        <li>
-          <div class="collapsible-header">Ask a Question</div>
-          <div class="collapsible-body">
-            <div class="row">
-              {{question-new session=session saveQuestion='saveQuestion'}}
+{{#if session.isAuthenticated}}
+  <div class="contaienr">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <ul class="collapsible popout" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">Ask a Question</div>
+            <div class="collapsible-body">
+              <div class="row">
+                {{question-new session=session saveQuestion='saveQuestion'}}
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+  {{dom-ready}}
+{{/if}}
 
 <div class="container">
   {{#each model as |question|}}
@@ -24,5 +27,3 @@
     </div>
   {{/each}}
 </div>
-
-{{dom-ready}}
