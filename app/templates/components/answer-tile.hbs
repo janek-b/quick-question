@@ -1,0 +1,15 @@
+{{yield}}
+
+<div class="card blue-grey">
+  <div class="card-content white-text">
+    <blockquote>{{answer.body}}</blockquote>
+    <hr>
+    <div class="chip hoverable left">
+      <img src={{answer.user.photoURL}} alt={{answer.user.name}}>
+      {{answer.user.name}}
+    </div>
+    <div class="right-align">
+      <p>{{answer.timestamp}}</p>
+    </div>
+  </div>
+</div>
