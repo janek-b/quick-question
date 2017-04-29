@@ -15,5 +15,13 @@ export default Ember.Component.extend({
         this.sendAction('saveQuestion', params);
       })
     }
+  },
+  didInsertElement: function() {
+    Ember.run.scheduleOnce('afterRender', this, function() {
+      this.$('.collapsible').collapsible();
+    });
+  },
+  willDestroyElement: function() {
+    this.$().off('collapsible');
   }
 });

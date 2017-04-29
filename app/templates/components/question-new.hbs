@@ -1,16 +1,30 @@
-
-<form class="col s12">
+<div class="contaienr">
   <div class="row">
-    <div class="input-field col s12">
-      {{input value=title type="text" class="validate"}}
-      <label for="title">Title</label>
-    </div>
-    <div class="input-field col s12">
-      {{textarea value=body class="materialize-textarea"}}
-      <label for="body">Additional Details</label>
-    </div>
-    <div class="col s12">
-      <button class="btn waves-effect waves-light" type="submit" {{action "saveQuestion"}}>Submit</button>
+    <div class="col s8 offset-s2">
+      <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Ask a Question</div>
+          <div class="collapsible-body">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    {{input value=title type="text" class="validate"}}
+                    <label for="title">Title</label>
+                  </div>
+                  <div class="input-field col s12">
+                    {{textarea value=body class="materialize-textarea"}}
+                    <label for="body">Additional Details</label>
+                  </div>
+                  <div class="col s12">
+                    <button class="btn waves-effect waves-light" type="submit" {{action "saveQuestion"}}>Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-</form>
+</div>
