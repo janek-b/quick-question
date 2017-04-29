@@ -1,0 +1,13 @@
+{{yield}}
+
+<form class="col s12">
+  <div class="row">
+    <div class="input-field col s12">
+      {{textarea value=body class="materialize-textarea"}}
+      <label for="body">Answer</label>
+    </div>
+    <div class="col s12">
+      <button class="btn waves-effect waves-light" type="submit" {{action "saveAnswer"}}>Submit</button>
+    </div>
+  </div>
+</form>
