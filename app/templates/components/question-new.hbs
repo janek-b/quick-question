@@ -3,10 +3,10 @@
     <div class="col s8 offset-s2">
       <ul class="collapsible popout" data-collapsible="accordion">
         <li>
-          <div class="collapsible-header">Ask a Question</div>
+          <div id="new-question-header" class="collapsible-header">Ask a Question</div>
           <div class="collapsible-body">
             <div class="row">
-              <form class="col s12">
+              <form class="col s12" {{action "saveQuestion" on="submit"}}>
                 <div class="row">
                   <div class="input-field col s12">
                     {{input value=title type="text" class="validate" required=true}}
@@ -17,7 +17,7 @@
                     <label for="body">Additional Details</label>
                   </div>
                   <div class="col s12">
-                    <button class="btn waves-effect waves-light" type="submit" {{action "saveQuestion"}}>Submit</button>
+                    <button class="btn waves-effect waves-light" type="submit">Submit</button>
                   </div>
                 </div>
               </form>

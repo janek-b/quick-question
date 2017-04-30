@@ -8,13 +8,14 @@ export default Ember.Component.extend({
       this.get('getUser').getUser(userID).then(user => {
         var params = {
           title: this.get('title'),
-          body: this.get('body'),
+          body: this.get('body') ? this.get('body') : "",
           timestamp: (new Date()).toJSON(),
           edit: "",
           user: user
         };
         this.sendAction('saveQuestion', params);
-      })
+      });
+      this.$('#new-question-header').click();
     }
   },
   didInsertElement: function() {

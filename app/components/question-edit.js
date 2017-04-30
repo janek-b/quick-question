@@ -10,6 +10,19 @@ export default Ember.Component.extend({
         user: this.get('question.user')
       };
       this.sendAction('editQuestion', question, params);
+    },
+    delete(question) {
+      if (confirm("Are you sure you want to delete this question?")) {
+        console.log("yes");
+      }
     }
+  },
+  didInsertElement: function() {
+    Ember.run.scheduleOnce('afterRender', this, function() {
+      this.$('.modal-trigger').leanModal();
+    });
+  },
+  willDestroyElement: function() {
+    this.$().off('modal');
   }
 });
