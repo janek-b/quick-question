@@ -2,15 +2,20 @@
   <div class="card hoverable blue-grey darken-1">
     <div class="card-content white-text">
       <span class="card-title text-capitalize">{{question.title}}</span>
-      <hr>
-      {{#link-to 'user' question.user.id}}
-        <div class="chip hoverable left">
-          <img src={{question.user.photoURL}} alt={{question.user.name}}>
-          {{question.user.name}}
+      {{!-- <hr> --}}
+      <div class="card-action">
+        {{#link-to 'user' question.user.id}}
+          <div class="chip hoverable left">
+            <img src={{question.user.photoURL}} alt={{question.user.name}}>
+            {{question.user.name}}
+          </div>
+        {{/link-to}}
+        <div class="right">
+          <p>{{time-format question.timestamp}}</p>
+          {{#if question.edit}}
+            <p><small>edited {{time-format question.edit}}</small></p>
+          {{/if}}
         </div>
-      {{/link-to}}
-      <div class="right-align">
-        <p>{{time-format question.timestamp}}</p>
       </div>
     </div>
   </div>

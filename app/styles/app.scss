@@ -24,6 +24,26 @@ body {
   font-weight: normal;
 }
 
+.btn-floating i.up-vote {
+  position: relative;
+  left: -2px;
+  top: -2px;
+  font-size: 4rem;
+}
+
+.btn-floating i.down-vote {
+  position: relative;
+  left: -2px;
+  top: 2px;
+  font-size: 4rem;
+}
+
+.vote-section {
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
 // #answer-card {
 //   min-height: 250px;
 // }

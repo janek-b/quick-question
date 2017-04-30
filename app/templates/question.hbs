@@ -9,7 +9,7 @@
   {{#if (is-owner answer.user.userID)}}
     {{answer-edit answer=answer editAnswer='editAnswer' deleteAnswer='deleteAnswer'}}
   {{else}}
-    {{answer-tile answer=answer}}
+    {{answer-detail answer=answer}}
   {{/if}}
 {{/each}}
 
