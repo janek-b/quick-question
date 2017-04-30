@@ -10,6 +10,7 @@ export default Ember.Component.extend({
           title: this.get('title'),
           body: this.get('body'),
           timestamp: (new Date()).toJSON(),
+          edit: "",
           user: user
         };
         this.sendAction('saveQuestion', params);
