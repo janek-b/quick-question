@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   didInsertElement: function() {
     Ember.run.scheduleOnce('afterRender', this, function() {
       this.$('ul.tabs').tabs();
+      // this.$('ul.tabs').tabs({'swipeable': true});
     });
   },
   willDestroyElement: function() {

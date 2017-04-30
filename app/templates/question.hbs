@@ -1,10 +1,9 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m12">
-      {{question-detail question=model session=session editQuestion='editQuestion'}}
-    </div>
-  </div>
-</div>
+{{#if (is-owner model.user.userID)}}
+  {{question-edit question=model session=session editQuestion='editQuestion' deleteQuestion='deleteQuestion'}}
+{{else}}
+  {{question-detail question=model session=session}}
+{{/if}}
+
 
 <div class="container">
   <div class="row">

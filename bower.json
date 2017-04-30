@@ -1,7 +1,7 @@
 {
   "name": "quick-question",
   "dependencies": {
-    "materialize": "0.97.7",
+    "materialize": "0.98.0",
     "moment": "^2.18.1"
   }
 }

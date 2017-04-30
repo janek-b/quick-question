@@ -11,15 +11,13 @@ export default Ember.Component.extend({
       };
       this.sendAction('editQuestion', question, params);
     },
-    delete(question) {
-      if (confirm("Are you sure you want to delete this question?")) {
-        console.log("yes");
-      }
+    deleteQuestion(question) {
+      this.sendAction('deleteQuestion', question);
     }
   },
   didInsertElement: function() {
     Ember.run.scheduleOnce('afterRender', this, function() {
-      this.$('.modal-trigger').leanModal();
+      this.$('.modal').modal();
     });
   },
   willDestroyElement: function() {
