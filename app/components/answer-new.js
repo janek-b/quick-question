@@ -9,6 +9,7 @@ export default Ember.Component.extend({
         var params = {
           body: this.get('body'),
           timestamp: (new Date()).toJSON(),
+          edit: "",
           question: this.get('question'),
           user: user
         };
